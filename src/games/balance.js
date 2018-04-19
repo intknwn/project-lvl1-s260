@@ -30,7 +30,7 @@ const balance = (num) => {
 };
 
 const makeQuestion = num => ({
-  question: `${num}`,
+  question: `Question: ${num}`,
   answer: `${balance(num)}`,
 });
 

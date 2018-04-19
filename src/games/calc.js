@@ -7,7 +7,7 @@ const operations = [
 ];
 
 const makeQuestion = (a, b, ops) => ({
-  question: `${a} ${ops.name} ${b}`,
+  question: `Question: ${a} ${ops.name} ${b}`,
   answer: `${ops.f(a, b)}`,
 });
 

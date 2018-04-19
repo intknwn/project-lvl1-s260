@@ -1,12 +1,12 @@
 import readlineSync from 'readline-sync';
 
-export const rand = (max = 10) => Math.floor(Math.random() * max);
+export const rand = (max = 10) => Math.floor(Math.random() * max) + 1;
 
 export const isEven = num => (num % 2 === 0);
 
 export default (description, question) => {
   console.log('Welcome to the Brain Games!');
-  console.log(description);
+  if (description) console.log(description);
 
   const userName = readlineSync.question('\nMay I have your name? ');
   console.log(`Hello, ${userName}!\n`);
@@ -14,7 +14,7 @@ export default (description, question) => {
   const iter = 3;
   for (let i = 0; i < iter; i += 1) {
     const round = question();
-    console.log(`Question: ${round.question}`);
+    console.log(round.question);
 
     const userAnswer = readlineSync.question('Your answer: ');
     const correctAnswer = round.answer;
