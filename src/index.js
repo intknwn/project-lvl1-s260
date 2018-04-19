@@ -14,7 +14,7 @@ export default (description, question) => {
   const iter = 3;
   for (let i = 0; i < iter; i += 1) {
     const round = question();
-    console.log(round.question);
+    console.log(`Question: ${round.question}`);
 
     const userAnswer = readlineSync.question('Your answer: ');
     const correctAnswer = round.answer;

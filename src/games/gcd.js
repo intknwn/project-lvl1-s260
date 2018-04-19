@@ -3,7 +3,7 @@ import runGame, { rand } from '..';
 const gcd = (a, b) => (b ? gcd(b, a % b) : a);
 
 const makeQuestion = (a, b) => ({
-  question: `Question: ${a} ${b}`,
+  question: `${a} ${b}`,
   answer: `${gcd(a, b)}`,
 });
 
